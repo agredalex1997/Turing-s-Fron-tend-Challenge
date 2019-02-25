@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Gordita';
+    src: url(./fonts/hinted-GorditaRegular.ttf);
+}
+
+body {
+    font-family: Gordita;
+}
+
+div.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 150px 100%;
+    grid-template-areas: "sidebar header info"
+        "sidebar form info";
+    height: 100vh;
+}
+
+/* SIDEBAR SECTION */
+
+div.sidebar {
+    grid-area: sidebar;
+    background: whitesmoke;
+}
+
+/* HEADER SECTION */
+
+div.header {
+    grid-area: header;
+}
+
+div.header * {
+    text-align: center;
+}
+
+/* FORM SECTION */
+
+div.form {
+    grid-area: form;
+}
+
+div.form h1 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-item * {
+    display: block;
+    width: 21rem;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.form-item input {
+    height: 2.5rem;
+    font-size: 2rem;
+}
+
+.form-item:last-child {
+    margin-top: 40px;
+}
+
+.form-item input {
+    background: white;
+    border: none;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+}
+
+.form-item label {
+    height: 1.5rem;
+    padding-left: 10px;
+    font-size: 2rem;
+    color: darkgray;
+}
+
+.form-item:not(:last-child) label {
+    position: relative;
+    top: 1.8rem;
+}
+
+.form-item:last-child label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form-item label.clicked {
+    top: 0;
+    font-size: 1rem;
+    color: gray;
+    font-weight: bold;
+}
+
+.form-item {
+    margin-bottom: 3rem;
+}
+
+.form-item label {
+    transition: all 0.15s linear;
+}
+
+/* INFO SECTION */
+div.info {
+    grid-area: info;
+}
