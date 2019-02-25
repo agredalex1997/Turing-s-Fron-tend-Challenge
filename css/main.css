@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Gordita';
-    src: url(./fonts/hinted-GorditaRegular.ttf);
+    src: url(../fonts/hinted-GorditaRegular.ttf);
 }
 
 body {
@@ -21,6 +21,23 @@ div.container {
 div.sidebar {
     grid-area: sidebar;
     background: whitesmoke;
+}
+
+div.sidebar li {
+    list-style: none;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+div.sidebar li.section {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-top: 25px;
+}
+
+div.sidebar li.clicked {
+    font-weight: bold;
 }
 
 /* HEADER SECTION */

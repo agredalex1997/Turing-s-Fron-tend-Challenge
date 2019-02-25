@@ -17,3 +17,17 @@ function changeClass(event) {
     console.log(input.parentNode.firstElementChild);
     console.log(input.value)
 }
+
+let sidebarOptions = document.querySelectorAll('div.sidebar li');
+
+sidebarOptions.forEach(function (option) {
+    option.addEventListener('click', changeSection)
+})
+
+function changeSection(event) {
+    sidebarOptions.forEach(function (option) {
+        option.classList.remove('clicked');
+    })
+
+    event.target.classList.add('clicked');
+}
