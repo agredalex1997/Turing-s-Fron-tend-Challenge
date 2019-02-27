@@ -37,7 +37,7 @@ div.container {
 }
 
 div.sidebar {
-    padding-top: 5.5rem;
+    padding-top: 7rem;
     grid-area: sidebar;
     background: whitesmoke;
     transition: all 0.2s linear;
@@ -48,13 +48,13 @@ div.sidebar.clicked {
 }
 
 div.sidebar .username {
-    padding: 10px;
+    padding: 0 25px;
     margin: 0;
     cursor: pointer;
 }
 
 div.sidebar ul {
-    padding: 0 15px;
+    padding: 0 25px;
     margin: 0;
 }
 
