@@ -5,6 +5,8 @@
 
 body {
     font-family: Gordita;
+    margin: 0;
+    padding: 0;
 }
 
 div.container {
@@ -18,15 +20,49 @@ div.container {
 
 /* SIDEBAR SECTION */
 
+#sidebar-toggler-hide,
+#sidebar-toggler-show {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+#sidebar-toggler-hide.clicked,
+#sidebar-toggler-show.clicked {
+    opacity: 0;
+    z-index: 0;
+}
+
 div.sidebar {
+    padding-top: 5.5rem;
     grid-area: sidebar;
     background: whitesmoke;
+    transition: all 0.2s linear;
+}
+
+div.sidebar.clicked {
+    transform: translateX(-100%);
+}
+
+div.sidebar .username {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+div.sidebar ul {
+    padding: 0 15px;
+    margin: 0;
 }
 
 div.sidebar li {
     list-style: none;
     padding: 15px 0;
     cursor: pointer;
+    margin: 0;
 }
 
 div.sidebar li.section {
@@ -44,6 +80,7 @@ div.sidebar li.clicked {
 
 div.header {
     grid-area: header;
+    border-bottom: 1px solid gray;
 }
 
 div.header * {
@@ -54,6 +91,7 @@ div.header * {
 
 div.form {
     grid-area: form;
+    padding-top: 2rem;
 }
 
 div.form h1 {
@@ -100,6 +138,7 @@ div.form h1 {
 .form-item:last-child label {
     font-size: 1rem;
     font-weight: bold;
+    color: gray;
 }
 
 .form-item label.clicked {
@@ -120,4 +159,18 @@ div.form h1 {
 /* INFO SECTION */
 div.info {
     grid-area: info;
+    padding: 0 15px;
+    text-align: right;
+}
+
+div.info * {
+    display: inline;
+}
+
+div.info svg {
+    vertical-align: middle;
+}
+
+div.info .username {
+    font-size: 1rem;
 }

@@ -31,3 +31,22 @@ function changeSection(event) {
 
     event.target.classList.add('clicked');
 }
+
+let sidebarTogglers = document.querySelectorAll("#sidebar-toggler-hide, #sidebar-toggler-show");
+let sidebar = document.querySelector("div.sidebar");
+
+sidebarTogglers.forEach(function (sidebarToggler) {
+    sidebarToggler.addEventListener('click', function (event) {
+        sidebarTogglers.forEach(function (sidebarTogglerIn) {
+            sidebarTogglerIn.classList.remove('clicked');
+        })
+
+        sidebarToggler.classList.add('clicked');
+
+        if (sidebar.classList.contains('clicked')) {
+            sidebar.classList.remove('clicked');
+        } else {
+            sidebar.classList.add('clicked');
+        }
+    })
+})

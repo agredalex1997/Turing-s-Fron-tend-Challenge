@@ -11,7 +11,21 @@
 
 <body>
     <div class="container">
+        <svg height="60" width="60" id="sidebar-toggler-hide">
+            <circle cx="30" cy="30" r="25" fill="white" />
+            <line x1="20" x2="40" y1="30" y2="30" stroke="black" stroke-width="3" />
+            <line x1="40" x2="30" y1="31" y2="20" stroke="black" stroke-width="3" />
+            <line x1="40" x2="30" y1="29" y2="40" stroke="black" stroke-width="3" />
+            <circle cx="30" cy="30" r="26" stroke="black" fill="transparent" />
+        </svg>
+        <svg height="60" width="60" id="sidebar-toggler-show">
+            <circle cx="30" cy="30" r="25" fill="#dc412e" />
+            <line x1="20" x2="40" y1="30" y2="30" stroke="white" stroke-width="3" />
+            <line x1="20" x2="30" y1="31" y2="20" stroke="white" stroke-width="3" />
+            <line x1="20" x2="30" y1="29" y2="40" stroke="white" stroke-width="3" />
+        </svg>
         <div class="sidebar">
+            <h1 class="username">Giselle</h1>
             <ul class="menu">
                 <li class="section">Account</li>
                 <li>Career</li>
@@ -48,7 +62,12 @@
                 </div>
             </form>
         </div>
-        <div class="info"></div>
+        <div class="info">
+            <h1 class="username">Giselle</h1>
+            <svg height="60" width="60">
+                <circle cx="30" cy="30" r="25" fill="#e86c1a" />
+            </svg>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>
